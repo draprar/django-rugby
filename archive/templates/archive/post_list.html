@@ -1,31 +1,351 @@
-<!doctype html>
-<html lang="pl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>AFC Rugby Giżycko</title>
-   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-</head>
-<body>
+{% load static %}
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Agency - Start Bootstrap Theme</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="{% static 'assets/favicon.ico' %}" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="{% static 'css/styles.css' %}" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand" href="#page-top"><img src="{% static 'assets/img/navbar-logo.svg' %}" alt="..." /></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars ms-1"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="#services">Informacje</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#portfolio">Grafiki</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about">O klubie</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#team">Archiwum</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Kontakt</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Masthead-->
+        <header class="masthead">
+            <div class="container">
+                <div class="masthead-subheading">Witaj na archiwalnej stronie AFC Rugby Giżycko (2008-2010)</div>
+                <div class="masthead-heading text-uppercase">Miłego zwiedzania!</div>
+                <div class="masthead-subheading">Pozdrawiam <br>Michał Walerowicz</div>
+                <a class="btn btn-primary btn-xl text-uppercase" href="#services">Zobacz więcej</a>
+            </div>
+        </header>
+        <!-- Services-->
+        <section class="page-section" id="services">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">Informacje</h2>
+                    <h3 class="section-subheading text-muted">Poniżej znajdują się informacje dotyczące drużyny.</h3>
+                </div>
+                <div class="row text-center">
+                    <div class="col-md-4">
+                        <span class="fa-stack fa-4x">
+                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                            <i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <h4 class="my-3">Nabór</h4>
+                        <p class="text-muted">Nabór do drużyny trwa cały rok.
 
-{% for post in posts %}
-<div class="accordion accordion-flush" id="accordionFlushExample">
-  <div class="accordion-item">
-    <h2 class="accordion-header" id="flush-headingOne">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-          <strong>Tytuł: {{ post.title }}</strong>
-      </button>
-    </h2>
-    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-      <div class="accordion-body">{{ post.text|linebreaksbr }} </div>
-    </div>
-  </div>
-</div>
+                            Jeżeli jesteś zainteresowany grą w naszej drużynie, skontaktuj się z nami poprzez formularz lub wybór innej formy kontaktu w dziale "Kontakt". Zapraszamy zarówno młodszych jak i starszych; bez znaczenia jest doświadczenie oraz warunki fizyczne. Miejsce na boisku jest dla każdego. Nie musisz umieć grać w rugby - dołożymy wszelkich starań, aby zapoznać Cię z tą wspaniałą dyscypliną sportu. Jedyne na co liczymy to chęć do gry i zaangażowanie.
+                            
+                            W okresie letnim możesz zwyczajnie przyjść na trening i popatrzeć na nas, nie musisz brać w nim udziału. Zjawienie się na treningu w celu zobaczenia jak to wszystko wygląda do niczego nie zobowiązuje.
+                            
+                            Trenowanie jest bezpłatne.
+                            
+                            Terminarz treningów dostępny tutaj.
+                            
+                            Pamiętaj! Rugby to nie futbol amerykański.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <span class="fa-stack fa-4x">
+                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                            <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <h4 class="my-3">Treningi</h4>
+                        <p class="text-muted">Trenujemy na stadionie MOSiR (płyta boczna). Treningi odbywają się jednak w różnych dniach i godzinach. Jeżeli, więc jesteś zainteresowany grą w naszej drużynie skontaktuj się z nami (dział Kontakt).
 
-{% endfor %}
+                            Nie bój się! Gramy w odmianę siedmioosobową rugby, w której liczy się przedewszystkim spryt i szybkość. Ze względu na zredukowaną ilość zawodników w drużynie na boisku jest więcej przestrzeni oraz zmniejsza się czas gry w kontakcie.
+                            
+                            Przepisy gry dostępne są tutaj (Polski Związek Rugby). Na treningach zawsze do wglądu kazdego są zasady rugby, więc chętni mogą się z nimi zapoznać.
+                            
+                            Po więcej informacjii zapraszamy do działu "Kontakt"
+                            </p>
+                    </div>
+                    <div class="col-md-4">
+                        <span class="fa-stack fa-4x">
+                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                            <i class="fas fa-lock fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <h4 class="my-3">Zawodnicy</h4>
+                        <p class="text-muted">W najlepszych czasach w klubie zarejestrowanych było 18 aktywnych zawodników, w wieku 15-22 lata, o wadze 50-100 kg i wzroście 160-185 cm. <br> At last but not least: bardzo dziękuję [zredaguj]</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Portfolio Grid-->
+        <section class="page-section bg-light" id="portfolio">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">Grafiki</h2>
+                    <h3 class="section-subheading text-muted">Grafiki związane z klubem.</h3>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-sm-6 mb-4">
+                        <!-- Portfolio item 1-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="{% static 'assets/img/about/1.jpg' %}" alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Pierwszy plakat</div>
+                                <div class="portfolio-caption-subheading text-muted">Illustration</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4">
+                        <!-- Portfolio item 2-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal2">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="{% static 'assets/img/about/2.jpg' %}" alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Drugi plakat</div>
+                                <div class="portfolio-caption-subheading text-muted">Graphic Design</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4">
+                        <!-- Portfolio item 3-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal3">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/TBdK3AkhQKE?si=cAtCs5TzGWus_A3y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Finish</div>
+                                <div class="portfolio-caption-subheading text-muted">Identity</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
+                </div>
+            </div>
+        </section>
+        <!-- About-->
+        <section class="page-section" id="about">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">O klubie</h2>
+                    <h3 class="section-subheading text-muted">Strona w 2019 r. została usunięta z domeny gizycko.pl, stąd z sentymentu przeniosłem ją na darmowy hosting, a następnie już w ramach nauki opracowałem nową wersję z użyciem Django. <br> W razie zainteresowania śledzeniem przeszłości klubu, zapraszam do skorzystania z Wayback Machine :)</h3>
+                </div>
+                <ul class="timeline">
+                    <li>
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="{% static 'assets/img/about/1.jpg' %}" alt="..." /></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4 class="subheading">Początki</h4>
+                            </div>
+                            <div class="timeline-body"><p class="text-muted">Pomysł na stworzenie w Giżycku drużyny rugby "7" narodził się już parę miesięcy temu. Kilka dni przed 6 czerwca, gdy plakaty z informacją o naborze do sekcji pojawiły się w mieście i szkołach klamka o powołaniu jej do życia zapadła. Plany zostały wdrążone w życie, bowiem właśnie 6 czerwca odbyło się w Giżyckim Centrum Kultury zebranie organizacyjne. Pomysłodawcą i jednocześnie pierwszym trenerem zespołu jest Michał Walerowicz - uczeń 1 LO w Giżycku. Podjął się dużego wyzwania, jakim jest prowadzenie drużyny z posiadaniem jedynie wiedzy teoretycznej.
+                            </p></div>
+                        </div>
+                    </li>
+                    <li class="timeline-inverted">
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="{% static 'assets/img/about/2.jpg' %}" alt="..." /></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4 class="subheading">Pierwsze zebranie</h4>
+                            </div>
+                            <div class="timeline-body"><p class="text-muted">Na spotkaniu organizacyjnym zjawiło się 14 osób. Uzgodniony został termin pierwszego treningu, który odbył się 10 czerwca na stadionie MOSiR. Na pierwszym "sprawdzianie kondycyjnym" (po którym kilka osób niestety odpadło) zostały ustalone terminy przyszłych treningów oraz kilka spraw formalnych.</p></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="{% static 'assets/img/about/3.jpg' %}" alt="..." /></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4 class="subheading">Formalizacja sekcji</h4>
+                            </div>
+                            <div class="timeline-body"><p class="text-muted">Nowa sekcja działała wówczas w stowarzyszeniu AFC (Active Free Crew). Po podjęciu uchwały o stworzeniu sekcji w stowarzyszeniu przestaliśmy być grupką znajomych, która rekreacyjnie bawi się w rugby. W niedługim czasie nastąpiło uruchomienie strony internetowej drużyny, co umożliwiło również reklamę. W między czasie część zawodników się wykruszyła, pojawili się również nowi - zaczęła się jednak formować stała grupa chłopaków uczęszczających regularnie na treningi.</p></div>
+                        </div>
+                    </li>
+                    <li class="timeline-inverted">
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="{% static 'assets/img/about/4.jpg' %}" alt="..." /></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4 class="subheading">Współpraca z WMPD PUDiZ Olsztyn</h4>
+                            </div>
+                            <div class="timeline-body"><p class="text-muted">Dzięki zaangażowaniu Justyny Nierwińskiej został nawiązany kontakt z pierwszoligową drużyną WMPD PUDiZ Olsztyn. Na stronie Olsztyńskiego klubu ukazała się wiadomość o zauważeniu naszej działalności i chęci pomocy ze strony olsztyńskiego klubu dla naszej drużyny. Niedługo potem zaaranżowanie zostało spotkanie z trenerem Olsztyńskiego klubu, panem Leszkiem Borsem. Odbyło się 26 czerwca na stadionie MOSiRu. Zobaczyliśmy, jak wygląda trening z prawdziwego zdarzenia, nabyliśmy nowych doświadczeń dzięki pracy z doświadczonym trenerem. Po zakończonym spotkaniu dostaliśmy 5 piłek od pana Leszka, a M. Walerowicz jako trener Giżyckich otrzymał przydatne w szkoleniach materiały pomocnicze.</p></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="{% static 'assets/img/about/5.jpg' %}" alt="..." /></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4 class="subheading">Rozgłos</h4>
+                            </div>
+                            <div class="timeline-body"><p class="text-muted">Informacje o spotkaniu opisane zostały w Gazecie Giżyckiej oraz Gazecie Olsztyńskiej. Artykuł z GO ukazał się również na stronie klubu z Olsztyna.</p></div>
+                        </div>
+                    </li>
+                    <li class="timeline-inverted">
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="{% static 'assets/img/about/6.jpg' %}" alt="..." /></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4 class="subheading">Współpracy ciąg dalszy</h4>
+                            </div>
+                            <div class="timeline-body"><p class="text-muted">5 lipca wybraliśmy się do Olsztyna, skąd trenerzy pierwszoligowca- P. Leszek Bors i Krzysztof Olsiński przetransportowali nas do Gągławek, gdzie rozegraliśmy nasz pierwszy mecz sparingowy z okazji 650-lecia tejże miejscowości. To było pierwsze, lecz nie ostatnie takie spotkanie. Niedługo rozegramy następne-tym razem w Giżycku. Koledzy z Olsztyna okazali się bardzo życzliwi i udzielali pomocnych wskazówek podczas gry. Żaden trening nie jest w stanie dać tyle, co gra.</p></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="{% static 'assets/img/about/7.jpg' %}" alt="..." /></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4 class="subheading">Klub z prawdziwego zdarzenia</h4>
+                            </div>
+                            <div class="timeline-body"><p class="text-muted">Obecnie, dzięki uprzejmości P. Andrzeja Paszkiewicza sekcja należy do Młodzieżowego Towarzystwa Sportowego. Do PZR zostało wysłane pismo z informacją o powstaniu drużyny. Teraz pozostało nam doskonalić swoje umiejętności i zgłębiać tajniki gry w rugby.</p></div>
+                        </div>
+                    </li>
+                    <li class="timeline-inverted">
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="{% static 'assets/img/about/8.jpg' %}" alt="..." /></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4 class="subheading">Czas na logo</h4>
+                            </div>
+                            <div class="timeline-body"><p class="text-muted">Drużyna nareszcie posiada swoje własne logo, które będzie pojawiało się na naszych strojach i wszelkich dogodnych dla tego typu grafiki obiektach.
+                            </p></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="{% static 'assets/img/about/9.jpg' %}" alt="..." /></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4 class="subheading">Poważny trening</h4>
+                            </div>
+                            <div class="timeline-body"><p class="text-muted">Drugi trening, który sprawił, że nasz zapał do gry urósł jeszcze bardziej odbył się 13-go sierpnia. Kolejnym trenerem, który zgodził się poświęcić nam czas był selekcjoner kadry juniorów p. Maciej Misiak, który przebywał w Giżycku wraz ze swoją klubową drużyną MKS Orkan Sochaczew na obozie sportowym. Wraz, z p. Maciejem pojawił się. p. Jakub Seklecki - zawodnik Sochaczewa. Wszyscy do treningu podeszli bardzo poważnie. A wrażenia po? Uśmiech na twarzach mówił wszystko. Serdecznie dziękujemy Panom za ofiarowaną pomoc i przekazanie nam cząstki posiadanej wiedzy i umiejętności. Spożytkujemy ją jak najlepiej.</p></div>
+                        </div>
+                    </li>
+                    <li class="timeline-inverted">
+                        <div class="timeline-image">
+                            <h4>
+                                Tu przygoda się kończy, ja wyjechałem na studia i trenowałem w AWFiS Rugby a klub niestety nie podtrzymał działalności :(
+                            </h4>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- Team-->
+        <section class="page-section bg-light" id="team">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">archiwum</h2>
+                    <h3 class="section-subheading text-muted">Poniżej zobrazowane archiwum wiadomości blabla starałem się nie redagować za bardzo, q przejrzystości jeno</h3>
+                </div>
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            <strong>Strona</strong>, 22-05-2010 00:20
+                        </button>
+                      </h2>
+                      <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <strong>
+                            Dane znajdujące się na stronie są już aktualne.
+                            
+                            W niedziele 23.05 wybieramy się do stolicy Warmii. Nasi kadeci będą grali z WMPD PUDiZ Olsztyn. Trzymajcie kciuki!
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                          <strong>Chojnice</strong>, 22-03-2009 12:20
+                        </button>
+                      </h2>
+                      <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <strong>W weekend 13-15 marca w Chojnickim hotelu "Olimp" na szkoleniu strefy północnej zebrało się niemal 20 trenerów drużyn rugby 7. Przez 3 dni uczestnicy zdobywali doświadczenie podczas zajęć teoretyczno-praktycznych. Teorię wykładał Tomasz Kapustka oraz Jarosław Bator, praktykę dodatkowo Daniel Kowalski. Duży wkład pracy wniósł również Dominik Jastrzębski z Floty Gdynia.
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-</body>
+                            Zaczynam od soboty, bo dopiero wtedy udało się dotrzeć na miejsce. Sobotni harmonogram przewidywał 4 wykłady teoretyczne (trening FIRA, filozofia gry, podstawowe info o sędziowaniu oraz puchar świata rugby 7) i 2 praktyczne. Podczas porannej praktyki organizatorzy przekazywali nam wiedzę nt. umiejętnej rozgrzewki, prawidłowego podawania piłki - mogliśmy tę wiedzę wykorzystać podczas gry. Na wieczornym treningu uczono nas m.in. prawidłowego ułożenia ciała podczas wykonywania określonych elementów gry, ćwiczyliśmy obronę i atak oraz wykonywaliśmy ćwiczenia ruchowe. Przed kolacją udaliśmy się na "mały rekonesans" do miasta. Zwiedzając Chojnice wpadliśmy m.in. na boisko miejscowego Tura Chojnice.
+                            
+                            Niedziela była dniem krótkim dla kursantów, ponieważ wielu uczestników śpieszyło się na mecze swoich drużyn, a jeszcze innych goniły obowiązki. Podczas porannego treningu ćwiczyliśmy młyny oraz dopracowywaliśmy elementy, których prawidłowego wykonania nie byliśmy pewni. W trakcie teorii omawialiśmy m.in. położenie zawodników na boisku.
+                            
+                            Kurs był poprowadzony profesjonalnie, kontakt z rugbowym środowiskiem zwiększa motywację i wyzwala chęć do działania. Wiedza zdobyta podczas zajęć pozwoli rozwijać giżycki klub rugby.
+                            Wielkie dzięki dla p. Tomasza Kapustki za zaproszenie i pozdro dla uczestników kursu.
+                            
+                            W Galerii fotki z Chojnic.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                          
+                        <strong>Hala, nabór</strong>, 08-01-2009 22:15
+                        </button>
+                      </h2>
+                      <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <strong>Sezon zbliża się wolnym krokiem, czas zacząć przygotowania. Aby występować w lidze zawodnik musi posiadać licencję. Do jej wyrobienia potrzebne są między innymi badania lekarskie. Niestety w Giżycku jest tylko jeden lekarz sportowy i przyjmuje on prywatnie. Koszt wizyty to wydatek rzędu 30 zł, proszę przygotować się na to, że aby zagrać w sezonie 2009 trzeba to załatwić. W następny wtorek będę wiedział, co i jak dokładnie, na forum więc wszystko opisze. Informuje o tym teraz, abyście mieli więcej czasu na ciułanie kasy.
+
+                            Inna sprawa, przepustkę aktualnie posiada 17 osób, czyli wszyscy dotychczasowi zawodnicy. Jednak ciągle dostaję wiadomości z prośbą o przyłączenie do drużyny. Nie mam nic przeciwko tylko, że bez przepustki nie da się wejść na hale. Postarałem się jednak i pojawiła się możliwość dołączenia do drużyny. Nie będę wdawał się w szczegóły. Ważne jest to, że nie wiem, ile w tym przypadku trwało będzie zaakceptowanie osoby i dopisanie jej do listy, więc radzę jak najszybciej przesyłać mi: imię, nazwisko, PESEL oraz numer dokumentu potwierdzającego tożsamość (dowód, legitymacja, paszport, etc.) wraz z jego nazwą (tzn., co to za dokument).
+                            
+                            Treningu w tym tygodniu nie ma z uwagi na to, że nie będzie mnie na miejscu. Zajęcia zostają przeniesione na następną sobotę, tj. 17.01.2009r. Mamy już przepustkę, więc jest to pewniak.
+                            O 14:45 spotykamy się pod Biedronką znajdującej się ul. Wilanowskiej 5 (koło obwodnicy). Nie ma spóźniania, o podanej godzinie wychodzimy spod Biedronki i kierujemy się na hale. Obecność obowiązkowa, ma być 17 osób.
+                        </div>
+                      </div>
+                    </div>
+                    ... cdn
+                  </div>
+            </div>
+        </section>
+        <!-- Contact-->
+        <section class="page-section" id="contact"></section>
+        <!-- Footer-->
+        <footer class="footer py-4">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-4 text-lg-start">Copyright &copy; Michał Walerowicz 2023</div>
+                    <div class="col-lg-4 my-3 my-lg-0">
+                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                    <div class="col-lg-4 text-lg-end">used a template from ... e 2023</div>
+                </div>
+            </div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="{% static 'js/scripts.js' %}"></script>
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <!-- * *                               SB Forms JS                               * *-->
+        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    </body>
 </html>
+
