@@ -137,7 +137,7 @@
                         <a href="https://web.archive.org/web/20161201000000*/rugby.gizycko.pl" target="_blank">Wayback Machine</a> :)</h3>
                 </div>
                 <ul class="timeline">
-                    <-- for post in posts => subheading: post_title + timeline-body: post_content && if post_id%2 == 1: odd else: even -->
+                    <!-- for post in posts => subheading: post_title + timeline-body: post_content && if post_id%2 == 1: odd else: even -->
                     <li>
                         <div class="timeline-image"><img class="rounded-circle img-fluid" src="{% static 'assets/img/logo.jpg' %}" alt="..." /></div>
                         <div class="timeline-panel">
@@ -240,64 +240,24 @@
             <div class="container">
                 <div class="text-center">
                     <h2 class="section-heading text-uppercase">archiwum</h2>
-                    <h3 class="section-subheading text-muted">Poniżej przedstawiam archiwum.</h3>
+                    <h3 class="section-subheading text-muted">Poniżej znajduje się archiwum newsów.</h3>
                 </div>
-                <div class="accordion" id="accordionExample">
-                    <div class="accordion-item">
-                      <h2 class="accordion-header">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                            <strong>Strona</strong>, 22-05-2010 00:20
-                        </button>
-                      </h2>
-                      <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                            Dane znajdujące się na stronie są już aktualne.
-                            
-                            W niedziele 23.05 wybieramy się do stolicy Warmii. Nasi kadeci będą grali z WMPD PUDiZ Olsztyn. Trzymajcie kciuki!
-                        </div>
-                      </div>
-                    </div>
-                    <div class="accordion-item">
-                      <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                          <strong>Chojnice</strong>, 22-03-2009 12:20
-                        </button>
-                      </h2>
-                      <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                          W weekend 13-15 marca w Chojnickim hotelu "Olimp" na szkoleniu strefy północnej zebrało się niemal 20 trenerów drużyn rugby 7. Przez 3 dni uczestnicy zdobywali doświadczenie podczas zajęć teoretyczno-praktycznych. Teorię wykładał Tomasz Kapustka oraz Jarosław Bator, praktykę dodatkowo Daniel Kowalski. Duży wkład pracy wniósł również Dominik Jastrzębski z Floty Gdynia.
 
-                            Zaczynam od soboty, bo dopiero wtedy udało się dotrzeć na miejsce. Sobotni harmonogram przewidywał 4 wykłady teoretyczne (trening FIRA, filozofia gry, podstawowe info o sędziowaniu oraz puchar świata rugby 7) i 2 praktyczne. Podczas porannej praktyki organizatorzy przekazywali nam wiedzę nt. umiejętnej rozgrzewki, prawidłowego podawania piłki - mogliśmy tę wiedzę wykorzystać podczas gry. Na wieczornym treningu uczono nas m.in. prawidłowego ułożenia ciała podczas wykonywania określonych elementów gry, ćwiczyliśmy obronę i atak oraz wykonywaliśmy ćwiczenia ruchowe. Przed kolacją udaliśmy się na "mały rekonesans" do miasta. Zwiedzając Chojnice wpadliśmy m.in. na boisko miejscowego Tura Chojnice.
-                            
-                            Niedziela była dniem krótkim dla kursantów, ponieważ wielu uczestników śpieszyło się na mecze swoich drużyn, a jeszcze innych goniły obowiązki. Podczas porannego treningu ćwiczyliśmy młyny oraz dopracowywaliśmy elementy, których prawidłowego wykonania nie byliśmy pewni. W trakcie teorii omawialiśmy m.in. położenie zawodników na boisku.
-                            
-                            Kurs był poprowadzony profesjonalnie, kontakt z rugbowym środowiskiem zwiększa motywację i wyzwala chęć do działania. Wiedza zdobyta podczas zajęć pozwoli rozwijać giżycki klub rugby.
-                            Wielkie dzięki dla p. Tomasza Kapustki za zaproszenie i pozdro dla uczestników kursu.
-                            
-                            W Galerii fotki z Chojnic.
-                        </div>
-                      </div>
-                    </div>
+                {% for post in posts reversed %}
+                <div class="accordion" id="accordion">
                     <div class="accordion-item">
-                      <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                          
-                        <strong>Hala, nabór</strong>, 08-01-2009 22:15
-                        </button>
-                      </h2>
-                      <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                          Sezon zbliża się wolnym krokiem, czas zacząć przygotowania. Aby występować w lidze zawodnik musi posiadać licencję. Do jej wyrobienia potrzebne są między innymi badania lekarskie. Niestety w Giżycku jest tylko jeden lekarz sportowy i przyjmuje on prywatnie. Koszt wizyty to wydatek rzędu 30 zł, proszę przygotować się na to, że aby zagrać w sezonie 2009 trzeba to załatwić. W następny wtorek będę wiedział, co i jak dokładnie, na forum więc wszystko opisze. Informuje o tym teraz, abyście mieli więcej czasu na ciułanie kasy.
-
-                            Inna sprawa, przepustkę aktualnie posiada 17 osób, czyli wszyscy dotychczasowi zawodnicy. Jednak ciągle dostaję wiadomości z prośbą o przyłączenie do drużyny. Nie mam nic przeciwko tylko, że bez przepustki nie da się wejść na hale. Postarałem się jednak i pojawiła się możliwość dołączenia do drużyny. Nie będę wdawał się w szczegóły. Ważne jest to, że nie wiem, ile w tym przypadku trwało będzie zaakceptowanie osoby i dopisanie jej do listy, więc radzę jak najszybciej przesyłać mi: imię, nazwisko, PESEL oraz numer dokumentu potwierdzającego tożsamość (dowód, legitymacja, paszport, etc.) wraz z jego nazwą (tzn., co to za dokument).
-                            
-                            Treningu w tym tygodniu nie ma z uwagi na to, że nie będzie mnie na miejscu. Zajęcia zostają przeniesione na następną sobotę, tj. 17.01.2009r. Mamy już przepustkę, więc jest to pewniak.
-                            O 14:45 spotykamy się pod Biedronką znajdującej się ul. Wilanowskiej 5 (koło obwodnicy). Nie ma spóźniania, o podanej godzinie wychodzimy spod Biedronki i kierujemy się na hale. Obecność obowiązkowa, ma być 17 osób.
+                        <h2 class="accordion-header" id="heading{{ post.id }}">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{ post.id }}" aria-expanded="true" aria-controls="collapse{{ post.id }}">
+                                <strong>{{ post.title }} ({{ post.published_date }})</strong>
+                            </button>
+                        </h2>
+                        <div id="collapse{{ post.id }}" class="accordion-collapse collapse" aria-labelledby="heading{{ post.id }}" data-bs-parent="#accordion">
+                            <div class="accordion-body">{{ post.text|linebreaksbr }}</div>
                         </div>
-                      </div>
                     </div>
-                    ...
+                    {% endfor %}
                   </div>
+
             </div>
         </section>
         <!-- Footer-->
