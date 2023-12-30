@@ -3,14 +3,12 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
         <title>AFC Rugby Giżycko</title>
-        <link rel="icon" type="image/x-icon" href="{% static 'assets/favicon.ico' %}" />
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
         <link href="{% static 'css/styles.css' %}" rel="stylesheet" />
+        <link rel="icon" href="{% static 'assets/favicon.ico' %}" type="image/x-icon" />
     </head>
     <body id="page-top">
         <!-- Navigation-->
@@ -34,7 +32,7 @@
         <!-- Masthead-->
         <header class="masthead">
             <div class="container">
-                <div class="masthead-subheading">Witaj w archiwum AFC Rugby Giżycko (2008-2010)</div>
+                <div class="masthead-subheading">Witaj w archiwum AFC Rugby Giżycko (2008-2010).</div>
                 <div class="masthead-heading text-uppercase">Miłego zwiedzania!</div>
                 <div class="masthead-subheading">Pamiętaj! Rugby to nie futbol amerykański.</div>
                 <a class="btn btn-primary btn-xl text-uppercase" href="#info">Zobacz więcej</a>
@@ -85,7 +83,7 @@
                 </div>
             </div>
         </section>
-        <!-- Media Grid-->
+        <!-- Media-->
         <section class="page-section bg-light" id="media">
             <div class="container">
                 <div class="text-center">
@@ -242,7 +240,7 @@
                     <h2 class="section-heading text-uppercase">archiwum</h2>
                     <h3 class="section-subheading text-muted">Poniżej znajduje się archiwum newsów.</h3>
                 </div>
-        {% block content %}
+        {% block news %}
         {% endblock %}
             </div>
         </section>
