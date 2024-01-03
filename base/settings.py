@@ -24,7 +24,11 @@ SECRET_KEY = 'django-insecure-=b6lit)tkygie0h*xh--zfqz6c9ee2pdh4!q2el@%j099euq6x
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
+<<<<<<< HEAD
 ALLOWED_HOSTS = ['*', '127.0.0.1', 'draprar.pythonanywhere.com', 'key-polymer-409722.lm.r.appspot.com']
+=======
+ALLOWED_HOSTS = ['127.0.0.1', 'draprar.pythonanywhere.com']
+>>>>>>> parent of 61adcdb (Change settings for AWS + install gunicorn==20.1.0 whitenoise==6.4.0)
 
 # Application definition
 
@@ -46,8 +50,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    "django.middleware.security.SecurityMiddleware",
-    "whitenoise.middleware.WhiteNoiseMiddleware",
 ]
 
 ROOT_URLCONF = 'base.urls'
@@ -121,17 +123,9 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = "static/"
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [BASE_DIR / "archive/static"]
 STATIC_ROOT = BASE_DIR / "staticfiles"
-
-STORAGES = {
-    "default": {
-        "BACKEND": "django.core.files.storage.FileSystemStorage",
-    },
-    "staticfiles": {
-        "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
-    },
-}
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
